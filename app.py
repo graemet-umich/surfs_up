@@ -27,20 +27,18 @@ session = Session(engine)
 app = Flask(__name__)
 
 
+## Create the Welcome Route
 
+@app.route("/")
 
-# # create new flask instance
-# app = Flask(__name__)
+def welcome():
+    return(
+    '''
+    Welcome to the Climate Analysis API!
+    Available Routes:
+    /api/v1.0/precipitation
+    /api/v1.0/stations
+    /api/v1.0/tobs
+    /api/v1.0/temp/start/end
+    ''')
 
-# #create root starting point
-# @app.route('/')
-# def index():
-#     return 'index'
-
-# @app.route('/hello')
-# def hello_world():
-#     return 'Hello world'
-
-# @app.route('/hard_fib')
-# def hard_fib():
-#     return '[0,1,1,2,3,5,8,13]'
